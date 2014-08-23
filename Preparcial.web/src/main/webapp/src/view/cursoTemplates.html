@@ -4,9 +4,9 @@
     <table class="table striped">
     <thead>
     <tr>
-		 <th>Name</th>
+		 <th>Nombre</th>
 		 <th>Programa</th>
-    <th>Actions</th>
+    <th>Acciones</th>
     </tr>
     </thead>
     <tbody>
@@ -16,10 +16,10 @@
 		<td><%= htmlEncode(curso.getDisplay('programa')) %></td>
     <td>
     <% if(showEdit) {%>
-    <a onclick="Backbone.trigger('<%= componentId %>-curso-edit',{id:<%= curso.id %>}); return false" >Edit</a> |
+    <a onclick="Backbone.trigger('<%= componentId %>-curso-edit',{id:<%= curso.id %>}); return false" >Editar</a> |
 	<% } %> 
 	<% if(showDelete) {%>
-    <a onclick="Backbone.trigger('<%= componentId %>-curso-delete',{id:<%= curso.id %>}); return false" >Delete</a> 
+    <a onclick="Backbone.trigger('<%= componentId %>-curso-delete',{id:<%= curso.id %>}); return false" >Borrar</a> 
 	<% } %>    
 	</td>
     </tr>
@@ -37,11 +37,11 @@
     <% }%>
 		<div class="form-group" >
 		<label for="name">Name</label>
-    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= curso.get('name') %>"/>	
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Ingrese un valor" value="<%= curso.get('name') %>"/>	
 		</div>
 		<div class="form-group" >
 		<label for="programa">Programa</label>
-    	<input type="text" class="form-control" id="programa" name="programa" placeholder="Enter value" value="<%= curso.get('programa') %>"/>	
+    	<input type="text" class="form-control" id="programa" name="programa" placeholder="Ingrese un valor" value="<%= curso.get('programa') %>"/>	
 		</div>
     </form>
     </div>

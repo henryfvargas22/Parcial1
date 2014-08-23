@@ -8,6 +8,7 @@
 		 <th>Anios Experiencia</th>
 		 <th>Num Publicaciones</th>
 		 <th>Fecha Vinculacion</th>
+                 <th>Tipo</th>
     <th>Actions</th>
     </tr>
     </thead>
@@ -18,6 +19,20 @@
 		<td><%= htmlEncode(profesor.getDisplay('aniosExperiencia')) %></td>
 		<td><%= htmlEncode(profesor.getDisplay('numPublicaciones')) %></td>
 		<td><%= htmlEncode(profesor.getDisplay('fechaVinculacion')) %></td>
+                var an=profesor.getDisplay('aniosExperiencia');
+                var pu=profesor.getDisplay('numPublicaciones');
+                if(an>=20 || pu>=3)
+                {
+                    <td>'Titular'</td>
+                }
+                else if(an>=10 || pu>=2)
+                {
+                    <td>'Asistente'</td>    
+                }
+                else
+                {
+                    <td>'De Planta'</td>
+                }
     <td>
     <% if(showEdit) {%>
     <a onclick="Backbone.trigger('<%= componentId %>-profesor-edit',{id:<%= profesor.id %>}); return false" >Edit</a> |

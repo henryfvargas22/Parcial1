@@ -4,10 +4,10 @@
     <table class="table striped">
     <thead>
     <tr>
-		 <th>Name</th>
-		 <th>Anios Experiencia</th>
-		 <th>Num Publicaciones</th>
-		 <th>Fecha Vinculacion</th>
+		 <th>Nombre</th>
+		 <th>Años de Experiencia</th>
+		 <th>Número de Publicaciones</th>
+		 <th>Fecha de Vinculación</th>
                  <th>Tipo</th>
     <th>Actions</th>
     </tr>
@@ -35,10 +35,10 @@
                 }
     <td>
     <% if(showEdit) {%>
-    <a onclick="Backbone.trigger('<%= componentId %>-profesor-edit',{id:<%= profesor.id %>}); return false" >Edit</a> |
+    <a onclick="Backbone.trigger('<%= componentId %>-profesor-edit',{id:<%= profesor.id %>}); return false" >Editar</a> |
 	<% } %> 
 	<% if(showDelete) {%>
-    <a onclick="Backbone.trigger('<%= componentId %>-profesor-delete',{id:<%= profesor.id %>}); return false" >Delete</a> 
+    <a onclick="Backbone.trigger('<%= componentId %>-profesor-delete',{id:<%= profesor.id %>}); return false" >Borrar</a> 
 	<% } %>    
 	</td>
     </tr>
@@ -56,19 +56,19 @@
     <% }%>
 		<div class="form-group" >
 		<label for="name">Name</label>
-    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= profesor.get('name') %>"/>	
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Ingrese un valor" value="<%= profesor.get('name') %>"/>	
 		</div>
 		<div class="form-group" >
 		<label for="aniosExperiencia">Anios Experiencia</label>
-    	<input type="text" class="form-control" id="aniosExperiencia" name="aniosExperiencia" placeholder="Enter value" value="<%= profesor.get('aniosExperiencia') %>"/>	
+    	<input type="text" class="form-control" id="aniosExperiencia" name="aniosExperiencia" placeholder="Ingrese un valor" value="<%= profesor.get('aniosExperiencia') %>"/>	
 		</div>
 		<div class="form-group" >
 		<label for="numPublicaciones">Num Publicaciones</label>
-    	<input type="text" class="form-control" id="numPublicaciones" name="numPublicaciones" placeholder="Enter value" value="<%= profesor.get('numPublicaciones') %>"/>	
+    	<input type="text" class="form-control" id="numPublicaciones" name="numPublicaciones" placeholder="Ingrese un valor" value="<%= profesor.get('numPublicaciones') %>"/>	
 		</div>
 		<div class="form-group" >
 			<label for="fechaVinculacion">Fecha Vinculacion</label>
-    		<input type="text" data-converter="date" data-date-format="dd/mm/yyyy" class="form-control" id="fechaVinculacion"  name="fechaVinculacion" placeholder="Enter value" />
+    		<input type="text" data-converter="date" data-date-format="dd/mm/yyyy" class="form-control" id="fechaVinculacion"  name="fechaVinculacion" placeholder="Ingrese un valor" />
     		<%= '<scr'+'ipt>' %>
         	$('#fechaVinculacion').datepicker({autoclose:true});
         	$('#fechaVinculacion').datepicker('setDate',App.Utils.Converter.date.toDate("<%= profesor.get('fechaVinculacion') %>"));

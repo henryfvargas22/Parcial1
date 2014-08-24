@@ -110,9 +110,9 @@
     <% _.each(secciones, function(seccion) { %>
 <!-- Se hace un nuevo <tr> por cada elemento en la lista-->
     <tr>
-            <td><%= htmlEncode(sport.getDisplay('name')) %></td>
+            <td><%= htmlEncode(seccion.getDisplay('name')) %></td>
             <!-- esta instrucción indica qué campo del elemento actual del bucle se debe mostrar en ese lugar (cada <td> es una columna)>  -->
-            <td><%= htmlEncode(sport.getDisplay('cupo')) %></td>
+            <td><%= htmlEncode(seccion.getDisplay('cupo')) %></td>
     </tr>
     <% }); %>
     </tbody>

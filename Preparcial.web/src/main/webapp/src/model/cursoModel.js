@@ -35,6 +35,18 @@ define(['model/_cursoModel'], function() {
             if(!attrs.name){
                 validationMessage = "The name can't be empty.";
             }
+            console.log(attrs.name);
+            var x = attrs.name.charAt(0);
+            var y = attrs.name.charAt(1);
+            var z = attrs.name.charAt(2);
+            var w = attrs.name.charAt(3);
+            console.log(x);
+            console.log(y);
+            console.log(z);
+            console.log(w);
+            if(x<65 && x>90 && y<65 && y>90 && z<65 && z>90 && w<65 && w>90){
+                validationMessage = "El nombre del curso deberia comenzar por cuatro caracteres que esten en mayusculas.";
+            }   
             if(validationMessage.length>0){
                return validationMessage;
             }

@@ -69,7 +69,7 @@ define(['controller/_profesorController','delegate/profesorDelegate'], function(
                             //Se hace el cálculo del nuevo campo
                             var x = d.attributes.fechaVinculacion;
                             console.log(x);
-                            var y = x.split(",");
+                            var y = x.split("/");
                             console.log(y);
                             var z = parseInt(y[2]);
                             console.log(z);

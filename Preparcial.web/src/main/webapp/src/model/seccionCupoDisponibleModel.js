@@ -1,6 +1,6 @@
 define(['model/seccionCupoDisponibleModel'], function() {
 //Aquí se define la estructura de un ítem de la lista. Note que el modelo extiende el modelo estándar backbone.
-    App.Model.SportPromedioModel = Backbone.Model.extend({
+    App.Model.SeccionCupoDisponibleModel = Backbone.Model.extend({
         defaults: {
          'name' : '',   
          'cupo' : ''

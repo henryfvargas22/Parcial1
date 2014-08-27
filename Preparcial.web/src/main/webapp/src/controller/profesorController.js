@@ -68,11 +68,17 @@ define(['controller/_profesorController','delegate/profesorDelegate'], function(
                         _.each(elementos, function(d) {
                             //Se hace el cálculo del nuevo campo
                             var x = d.attributes.fechaVinculacion;
-                            var y = d.split(",");
+                            console.log(x);
+                            var y = x.split(",");
+                            console.log(y);
                             var z = parseInt(y[2]);
+                            console.log(z);
                             var actual = new Date();
+                            console.log(actual);
                             var date = actual.getFullYear();
+                            console.log(date);
                             var vinc = "" + (date-z);
+                            console.log(vinc);
                             /*Ahora se instancia un SportPromModel, con un nuevo objeto JSON como parámetro como constructor (antes sportModel), extrayendo los datos de “d”.*/
                             var model = new App.Model.ProfesoresDestacadosModel({name: d.attributes.name, vinculacion: vinc});
                             //y se agrega finalmente a los modelos prom de la lista.

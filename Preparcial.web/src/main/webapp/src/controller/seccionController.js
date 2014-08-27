@@ -46,6 +46,7 @@ define(['controller/_seccionController','delegate/seccionDelegate'], function() 
         },
         seccionCupoDisponible: function(params) {
         //Elementos para invocar el servicio getSports
+           
             if (params) {
                 var data = params.data;
             }
@@ -67,9 +68,9 @@ define(['controller/_seccionController','delegate/seccionDelegate'], function() 
                         //Se itera sobre la variable elementos, que corresponden a la lista de modelos obtenida del servico REST getSports
                         _.each(elementos, function(d) {
                             //Se hace el cálculo del nuevo campo
-                            var cupo = "" + (parseInt(d.attributes.cupoMaximo) - parseInt(d.attributes.inscritos));
+                            var cup = "" + (parseInt(d.attributes.cupoMaximo) - parseInt(d.attributes.inscritos));
                             /*Ahora se instancia un SportPromModel, con un nuevo objeto JSON como parámetro como constructor (antes sportModel), extrayendo los datos de “d”.*/
-                            var model = new App.Model.SeccionCupoDisponibleModel({name: d.attributes.name, average: cupo});
+                            var model = new App.Model.SeccionCupoDisponibleModel({name: d.attributes.name, cupo: cup});
                             //y se agrega finalmente a los modelos prom de la lista.
                             self.seccionCupoDisponibleModelList.models.push(model);
                         });
